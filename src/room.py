@@ -4,3 +4,8 @@ class Room:
     def __init__(self, name, description):
         self.name = name,
         self.description =  description
+    def __str__(self):
+        self.__repr__()
+        return f'{self.name}'
+    def print_desc(self):
+        return f'{self.description}'
