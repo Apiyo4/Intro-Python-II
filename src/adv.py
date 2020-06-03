@@ -66,6 +66,8 @@ while True:
         continue
 # Print an error message if the movement isn't allowed.
 #
+    if len(userInput) != 1:
+        print("Error, location not found, please type either e, n, w, s")
 # If the user enters "q", quit the game.
     if userInput.lower() == "q" or userInput.lower()== "quit" :
         break
