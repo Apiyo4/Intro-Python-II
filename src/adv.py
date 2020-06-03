@@ -43,10 +43,12 @@ player = Player(room['outside'])
 
 # Write a loop that:
 #
+while True:
 # * Prints the current room name
-print(player.location)
+    print(player.location)
 # * Prints the current description (the textwrap module might be useful here).
-
+    for desc in textwrap.wrap(player.location.print_desc()):
+        print(desc)
 # * Waits for user input and decides what to do.
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
