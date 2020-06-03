@@ -47,15 +47,15 @@ def go_to(userInput, location):
     attribute = userInput + '_to'
     if hasattr(location, attribute):
       return getattr(location, attribute)
-    print("Wrong way")
+    print("Wrong way\n")
     return location
 
 while True:
 # * Prints the current room name
     print(player.location)
 # * Prints the current description (the textwrap module might be useful here).
-    for desc in textwrap.wrap(player.location.print_desc()):
-        print(desc)
+    for desc in textwrap.wrap(player.location.print_desc(), width=500):
+        print(desc + "\n")
 # * Waits for user input and decides what to do.
     userInput = input('Where do you want to go?\nType q or quit to end game; n, s, w, e to navigate to a new room .\n')
    
